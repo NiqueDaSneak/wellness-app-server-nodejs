@@ -1,0 +1,22 @@
+{
+  "name": "wellness-app",
+  "version": "1.0.0",
+  "description": "Server to handle API requests for Facebook Messenger App",
+  "main": "app.js",
+  "scripts": {
+    "test": "loading"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NiqueDaSneak/wellness-app-server-nodejs.git"
+  },
+  "author": "Dom Clemmer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NiqueDaSneak/wellness-app-server-nodejs/issues"
+  },
+  "homepage": "https://github.com/NiqueDaSneak/wellness-app-server-nodejs#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
