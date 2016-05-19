@@ -4,7 +4,8 @@
   "description": "Server to handle API requests for Facebook Messenger App",
   "main": "app.js",
   "scripts": {
-    "test": "loading"
+    "test": "loading",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
