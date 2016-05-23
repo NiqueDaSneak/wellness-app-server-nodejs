@@ -32,8 +32,18 @@ app.post('/webhook/', function (req, res) {
     if (event.message && event.message.text) {
       var text = event.message.text;
       // Handle a text message from this sender
-      console.log(text);
-      sendTextMessage(sender, "Echo: " + text);
+      if (text.toLowerCase() === 'hello') {
+        sendTextMessage(sender, "Hi there!");
+        
+      }
+
+      if (text.toLowerCase() === 'goodbye') {
+        sendTextMessage(sender, "See you later!");
+      }
+
+      if (text.toLowerCase() === 'help') {
+        sendTextMessage(sender, "Dom is teaching me how to help you. Sit tight!");
+      }
     
     }
 
