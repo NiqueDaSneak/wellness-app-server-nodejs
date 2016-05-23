@@ -31,9 +31,9 @@ app.post('/webhook/', function (req, res) {
 
     if (event.message && event.message.text) {
       var text = event.message.text;
-      var ingredientsArray = text.split(", ")
+      var ingredientsArray = text.split(", ");
       // Handle a text message from this sender
-     sendTextMessage(sender, "This should be the last ingredient" + ingredientsArray[-1])
+     sendTextMessage(sender, "This should be the last ingredient" + ingredientsArray[-1]);
     
     }
     
