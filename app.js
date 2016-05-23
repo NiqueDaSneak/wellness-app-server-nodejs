@@ -28,30 +28,22 @@ app.post('/webhook/', function (req, res) {
   for (i = 0; i < messaging_events.length; i++) {
     var event = req.body.entry[0].messaging[i];
     var sender = event.sender.id;
-
+    
     if (event.message && event.message.text) {
       var text = event.message.text;
-      var ingredientsArray = text.split(", ");
       // Handle a text message from this sender
-     sendTextMessage(sender, "This should be the last ingredient" + ingredientsArray[-1]);
-    
-    }
-    
-    // if (event.message && event.message.text) {
-    //   var text = event.message.text;
-    //   // Handle a text message from this sender
-    //   if (text.toLowerCase() === 'hello') {
-    //     sendTextMessage(sender, "Hi there!");
+      if (text.toLowerCase() === 'hello') {
+        sendTextMessage(sender, "Hi there!");
         
-    //   }
+      }
 
-    //   if (text.toLowerCase() === 'goodbye') {
-    //     sendTextMessage(sender, "See you later!");
-    //   }
+      if (text.toLowerCase() === 'goodbye') {
+        sendTextMessage(sender, "See you later!");
+      }
 
-    //   if (text.toLowerCase() === 'help') {
-    //     sendTextMessage(sender, "Dom is teaching me how to help you. Sit tight!");
-    //   }
+      if (text.toLowerCase() === 'help') {
+        sendTextMessage(sender, "Dom is teaching me how to help you. Sit tight!");
+      }
     
     }
 
