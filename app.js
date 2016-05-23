@@ -34,22 +34,21 @@ app.post('/webhook/', function (req, res) {
       var text = event.message.text;
       var ingredientsArray = text.split(", ");
       // Handle a text message from this sender
-     sendTextMessage(sender, "This should be the last ingredient: " + ingredientsArray[0]);
     
     
 
-      // if (text.toLowerCase() === 'hello') {
-      //   sendTextMessage(sender, "Hi there!");
+      if (text.toLowerCase() === 'hello') {
+        sendTextMessage(sender, "Hi there!");
         
-      // }
+      } else if (text.toLowerCase() === 'goodbye') {
+        sendTextMessage(sender, "See you later!");
 
-      // if (text.toLowerCase() === 'goodbye') {
-      //   sendTextMessage(sender, "See you later!");
-      // }
+      } else if (text.toLowerCase() === 'help') {
+        sendTextMessage(sender, "Dom is teaching me how to help you. Sit tight!");
 
-      // if (text.toLowerCase() === 'help') {
-      //   sendTextMessage(sender, "Dom is teaching me how to help you. Sit tight!");
-      // }
+      } else {
+        sendTextMessage(sender, "This should be the first ingredient: " + ingredientsArray[0]);
+      }
     // End of message handler
     }
 
